@@ -1,6 +1,7 @@
 const path = require("path");
 const webpack = require("webpack");
-const portToUse = process.env.PORT || 3000;
+const host = process.env.IP || '0.0.0.0';
+const port = process.env.PORT || 3000;
 
 module.exports = {
   entry: "./src/index.js", // tells Webpack where to start bundling our files
@@ -45,9 +46,11 @@ module.exports = {
   // Note that devServer also has a publicPath property. 
   // This publicPath tells the server where our bundled code actually is.
   devServer: {
+    disableHostCheck: true, // For servers behind a proxy - okay for a dev server
+    host,
     contentBase: path.join(__dirname, "public/"),
-    port: portToUse,
-    publicPath: `http://localhost:${portToUse}/dist/`,
+    port,
+    publicPath: `http://${host}:${port}/dist/`,
     hotOnly: true
   },
   plugins: [new webpack.HotModuleReplacementPlugin()]
