@@ -1,0 +1,17 @@
+{
+  "name": "@gurkamalpsc/react-app-from-scratch",
+  "version": "1.0.0",
+  "description": "My attempt to create a react app starter repository without the use of the create-react-app CLI.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gurkamal Singh",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0"
+  }
+}
