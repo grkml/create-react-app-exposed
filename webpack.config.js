@@ -21,7 +21,16 @@ module.exports = {
       { // CSS rule
         test: /\.css$/,
         use: ["style-loader", "css-loader"]
-      }
+      },
+      { // Image rule
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {},
+          },
+        ],
+      },
     ]
   },
   // The resolve property allows us to specify which extensions Webpack will resolve.
