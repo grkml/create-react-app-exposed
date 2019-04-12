@@ -1,5 +1,5 @@
 {
-  "name": "@gurkamalpsc/react-app-from-scratch",
+  "name": "@gurkamalpsc/create-react-app-exposed",
   "version": "1.0.0",
   "description": "My attempt to create a react app starter repository without the use of the create-react-app CLI.",
   "main": "index.js",
